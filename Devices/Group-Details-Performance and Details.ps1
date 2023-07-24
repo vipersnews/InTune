@@ -13,7 +13,7 @@ Catch {
     Return
 }
 
-#Check all possibilities on https://developer.microsoft.com/en-us/graph/graph-explorer searching https://graph.microsoft.com/beta/deviceManagement/managedDevices?$filter=azureADDeviceId eq 'a8fdeca4-edb2-46e5-b617-74cbd4ca9cba'
+#Check all possibilities on https://developer.microsoft.com/en-us/graph/graph-explorer searching https://graph.microsoft.com/beta/deviceManagement/managedDevices?$filter=azureADDeviceId eq 'a8fdeca4-edb2-46e5-b617-74cbd4ca9aaa'
 
 class DeviceArray {
     [string]$deviceName
@@ -34,7 +34,7 @@ class DeviceArray {
 
 #Select the AAD Group to search within the ' ' after DisplayName eq
 
-$devices = get-AzureADGroupMember -All $true -ObjectId (Get-AzureADGroup -Filter "DisplayName eq 'AAD-Corporate-Devices-Students-DELL'").ObjectId 
+$devices = get-AzureADGroupMember -All $true -ObjectId (Get-AzureADGroup -Filter "DisplayName eq 'AAD-Corporate-Devices-BLAH'").ObjectId 
 
 foreach ($device in $devices){
 try {
